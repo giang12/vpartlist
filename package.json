@@ -1,0 +1,34 @@
+{
+  "name": "vpartlist",
+  "version": "0.1.2",
+  "description": "build a parts list for a verilog module",
+  "main": "lib/vpartlist.js",
+  "keywords": [
+    "vpartlist",
+    "verilog"
+  ],
+  "author": {
+    "name": "Giang Nguyen",
+    "email": "nggiang12@gmail.com",
+    "url": "https://github.com/giang12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giang12/vpartlist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/giang12/vpartlist/issues"
+  },
+  "homepage": "https://github.com/giang12/vpartlist#readme",
+  "license": "rockstar it boyz",
+  "bin": {
+    "vpartlist": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "minimist": "~1.2.0",
+    "lodash": "~4.17.4"
+  }
+}

@@ -1,0 +1,8 @@
+usage: vpartlist path/to/dir/moduleToGetPartListOf.v -p(ath)
+
+	build a parts list for a verilog module
+
+FLAGS:
+	-h, --help	help
+	-p, --path	include full path to each components
+
