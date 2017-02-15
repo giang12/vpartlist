@@ -1,8 +1,10 @@
-usage: vpartlist path/to/dir/moduleToGetPartListOf.v -p(ath)
+usage: vpartlist path/to/src/dir/componentA.v -o built/componentA -v
 
 	build a parts list for a verilog module
 
 FLAGS:
-	-h, --help	help
-	-p, --path	include full path to each components
+	-h, --help		help
+	-o dir/, --output=dir/	output directory
+	-v, --verbose	verbose log
+	-p, --path		include full path to each components 
 
