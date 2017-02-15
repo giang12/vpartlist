@@ -1,4 +1,4 @@
-usage: vpartlist path/to/src/dir/componentA.v -o built/componentA -v
+usage: vpartlist path/to/src/dir/componentA.v -vo built/componentA 
 
 	build a parts list for a verilog module
 
