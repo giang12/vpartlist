@@ -21,14 +21,15 @@ if (argv.help) {
     return;
 }
 var part = argv._.shift();
-if (argv.v) {
-    console.log(part, argv);
-}
+
+var _log = argv.v ? console.log : function(){};
+
+_log(part, argv);
 
 return (new vPartList(part, argv, function(_mod, err) {
     if (err) {
          console.log(err.name + ":", err.message);
-         console.log(err.stack);
+         _log(err.stack);
          process.exit(1);
     }
     console.log(_mod.name, "(" + _mod.partlist.length, "components):");
