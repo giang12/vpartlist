@@ -1,1 +1,4 @@
 node_modules/**/*
+*.sublime-*
+.nyc_output
+coverage

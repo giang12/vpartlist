@@ -25,7 +25,8 @@
     "vpartlist": "index.js"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap test/*.js",
+    "coverage": "tap test/*.js --cov --coverage-report=html"
   },
   "dependencies": {
     "minimist": "~1.2.0",
