@@ -3,7 +3,7 @@ var t = require('tap'),
     path = require('path'),
     vPartList = require('../index');
 
-var src = path.resolve("./src/"),
+var src = path.resolve("./sample_src/"),
     des = "./sandbox/alu",
     mod = "./alu/alu.v";
 

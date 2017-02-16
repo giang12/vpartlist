@@ -4,7 +4,7 @@ var t = require('tap'),
     vPartList = require('../index');
 
 t.jobs = 12; //run test in parallel, the value doesnt matter aslong as >1
-var src = "./src/",
+var src = "./sample_src/",
     des = "./sandbox/alu",
     mod = "./alu/alu.v";
 

@@ -8,7 +8,7 @@ var test = require('tap').test,
     path = require('path'),
     vPartList = require('../index');
 
-var src = "./src/",
+var src = "./sample_src/",
     des = "./sandbox/no_src_repo",
     mod = "./alu/alu_hier_bench.v";
 

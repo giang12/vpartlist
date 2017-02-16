@@ -3,7 +3,7 @@ var test = require('tap').test,
     path = require('path'),
     vPartList = require('../index');
 
-var src = "./src/",
+var src = "./sample_src/",
     des = "./sandbox/alu",
     mod = "./alu/alu.v";
 var expected = {
