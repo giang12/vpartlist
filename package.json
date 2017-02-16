@@ -25,7 +25,7 @@
     "vpartlist": "index.js"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "exit 1"
   },
   "dependencies": {
     "minimist": "~1.2.0",
