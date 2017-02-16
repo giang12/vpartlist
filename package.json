@@ -22,7 +22,7 @@
   "homepage": "https://github.com/giang12/vpartlist#readme",
   "license": "rockstar it boyz",
   "bin": {
-    "vpartlist": "bin/cmd.js"
+    "vpartlist": "bin/vpartlist.js"
   },
   "scripts": {
     "test": "tap test/*.js",

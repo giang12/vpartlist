@@ -8,43 +8,21 @@ var src = "./sample_src/",
     mod = "./alu/alu.v";
 var expected = {
     name: 'alu',
-    partlist: ['alu.v',
-        'inverter_16bit.v',
-        'shifter.v',
-        'and2_16bit.v',
-        'xor2_16bit.v',
-        'or2_16bit.v',
-        'cla_16bit.v',
-        'mux4_1_16bit.v',
-        'mux2_1_16bit.v',
-        'nor16.v',
-        'overflow_detector.v',
-        'and2.v',
-        'inverter.v',
-        'shifter_level_0.v',
-        'shifter_level_1.v',
-        'shifter_level_2.v',
-        'shifter_level_3.v',
-        'xor2.v',
-        'or2.v',
-        'clb4.v',
-        'cla.v',
-        'cla_4bit.v',
-        'mux4_1.v',
-        'mux2_1.v',
-        'not1.v',
-        'shifter_lsb_msb.v',
-        'nand2.v'
+    partlist: [
+        "alu.v", "inverter_16bit.v", "shifter.v", "and2_16bit.v", "xor2_16bit.v", "or2_16bit.v", "cla_16bit.v", "mux4_1_16bit.v", "mux2_1_16bit.v", "nor16.v", "overflow_detector.v", "and2.v", "inverter.v", "shifter_level_0.v", "shifter_level_1.v", "shifter_level_2.v", "shifter_level_3.v", "xor2.v", "or2.v", "clb4.v", "cla.v", "cla_4bit.v", "mux4_1.v", "mux2_1.v", "not1.v", "shifter_lsb_msb.v", "nand2.v"
     ]
 }
 
 test("Simple success building `alu.v`", function(t) {
     t.plan(4);
+    /**
+     * $ vpartlist ./sample_src/alu/alu.v -vr ./sample_src/ -o ./sandbox/alu
+     */
     new vPartList(path.join(src, mod), {
         path: false,
         repository: src,
         output: path.resolve(des),
-        verbose: false
+        verbose: true //should see some output in terminal
     }, function(mod, err) {
         t.ifError(err);
         t.equals(mod.name, expected.name);
