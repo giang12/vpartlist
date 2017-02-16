@@ -2,7 +2,7 @@
   "name": "vpartlist",
   "version": "0.1.3",
   "description": "build a parts list for a verilog module",
-  "main": "lib/vpartlist.js",
+  "main": "index.js",
   "keywords": [
     "vpartlist",
     "verilog"
@@ -25,11 +25,14 @@
     "vpartlist": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap test/*.js"
   },
   "dependencies": {
     "minimist": "~1.2.0",
     "lodash": "~4.17.4",
     "mkdirp": "~0.5.1"
+  },
+  "devDependencies": {
+    "tap": "~10.1.1"
   }
 }

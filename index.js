@@ -5,20 +5,21 @@ var fs = require('fs');
 var minimist = require('minimist');
 
 var argv = minimist(process.argv.slice(2), {
-    alias: { o: 'output', p: 'path', v: 'verbose', h: 'help' },
+    alias: { o: 'output', r: 'repository', p: 'path', v: 'verbose', h: 'help' },
     boolean: [ 'path', 'verbose' ],
-    string: ['output']
+    string: ['output', 'repository']
 });
 
 if (argv.help) {
     fs.createReadStream(__dirname + '/usage.txt').pipe(process.stdout);
     return;
 }
-
-var paths = argv._.shift();
-
+var part = argv._.shift();
+if(argv.v){
+    console.log(part, argv);
+}
 return require.main === module ?
-    (new vPartList(paths, argv , function(_mod, err) {
+    (new vPartList(part, argv , function(_mod, err) {
         if (err) {
             return console.log(err)
         }
