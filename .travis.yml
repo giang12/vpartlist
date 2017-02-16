@@ -7,8 +7,6 @@ deploy:
   on:
     tags: true
     repo: giang12/vpartlist
-email: nggiang12@gmail.com
-provider: npm
 node_js:
 - stable
 - '6'
