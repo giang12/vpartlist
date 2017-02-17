@@ -1,0 +1,8 @@
+__work/**/*
+transcript
+dump.*
+wsrun.log
+node_modules/**/*
+*.v~
+*.vcheck.out
+*.log

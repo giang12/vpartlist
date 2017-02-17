@@ -8,7 +8,7 @@ var test = require('tap').test,
     path = require('path'),
     vPartList = require('../index');
 
-var src = "./sample_src/",
+var src = "./sample_a/",
     des = "./sandbox/no_src_repo",
     mod = "./alu/alu_hier_bench.v";
 
@@ -25,9 +25,7 @@ var expected = {
 test("vPartlist should look for components under the same directory of requested component", function(t) {
     t.plan(4);
     new vPartList(path.join(src, mod), {
-        repository: undefined,
         output: path.resolve(des),
-        verbose: false
     }, function(mod, err) {
         t.ifError(err);
         t.equals(mod.name, expected.name);

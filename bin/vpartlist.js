@@ -7,20 +7,23 @@ var minimist = require('minimist');
 var argv = minimist(process.argv.slice(2), {
     alias: {
         o: 'output',
-        r: 'repository',
+        r: 'repositories',
         p: 'path',
         v: 'verbose',
         h: 'help'
     },
     boolean: ['path', 'verbose'],
-    string: ['output', 'repository']
+    string: ['output', 'repositories']
 });
 
 if (argv.help) {
     fs.createReadStream(__dirname + '/usage.txt').pipe(process.stdout);
     return;
 }
-var part = argv._.shift();
+
+var part = typeof argv._[0] === 'string' ? argv._.shift() : undefined;
+
+argv.r = argv.repositories = argv.r ? [argv.r].concat(argv._) : undefined; 
 
 var _log = argv.v ? console.log : function(){};
 

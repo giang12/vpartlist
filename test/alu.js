@@ -3,9 +3,9 @@ var test = require('tap').test,
     path = require('path'),
     vPartList = require('../index');
 
-var src = "./sample_src/",
+var res = ["./sample_a/", "./sample_b"],
     des = "./sandbox/alu",
-    mod = "./alu/alu.v";
+    mod = "./sample_a/alu/alu.v";
 var expected = {
     name: 'alu',
     partlist: [
@@ -18,16 +18,16 @@ test("Simple success building `alu.v`", function(t) {
     /**
      * $ vpartlist ./sample_src/alu/alu.v -vr ./sample_src/ -o ./sandbox/alu
      */
-    new vPartList(path.join(src, mod), {
+    new vPartList(path.resolve(mod), {
         path: false,
-        repository: src,
+        repositories: res,
         output: path.resolve(des),
         verbose: true //should see some output in terminal
     }, function(mod, err) {
         t.ifError(err);
         t.equals(mod.name, expected.name);
         t.type(mod.partlist, 'Array');
-        t.equals(mod.partlist.length, expected.partlist.length);
+        t.equals(mod.partlist.length, expected.partlist.length, "should have " + expected.partlist.length + " components");
     });
 });
 

@@ -1,12 +1,12 @@
-usage: vpartlist sample_src/alu/alu.v -vr sample_src/ -o sandbox/alu 
+usage: vpartlist sample_a/alu/alu.v -vr sample_a/ sample_b/ -o sandbox/foo 
 
-  build a parts list for `alu.v` module from components found under `sample_src/`
-  and save all components to `sandbox/alu` (create dir if not existed)
+  build a parts list for `alu.v` module from components found under [sample_a/, sample_b/]
+  and save all components to `sandbox/foo` (create dir if not existed)
 
 FLAGS:
 	-h, --help		help
-	-r repoDir/, --repository=reporDir/		root directory of verilog source code 
-      (DEFAULT to parent directory of requested module, e.g sample_src/alu/ for sample_src/alu/alu.v)
+	-r repoDir/, --repositories=reporDir/		root directories of verilog source code 
+      (DEFAULT to parent directory of requested module, e.g sample_a/alu/ for sample_a/alu/alu.v)
 	-o dir/, --output=dir/	output directory
       (DEFAULT no output if undefined)
 	-v, --verbose	verbose log

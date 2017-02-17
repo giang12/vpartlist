@@ -3,8 +3,7 @@ var t = require('tap'),
     path = require('path'),
     vPartList = require('../index');
 
-var src = path.resolve("./sample_src/"),
-    des = "./sandbox/alu",
+var src = path.resolve("./sample_a/"),
     mod = "./alu/alu.v";
 
 t.jobs = 2;
@@ -14,8 +13,8 @@ t.jobs = 2;
 
 t.test("should include full path to components", function(t) {
     new vPartList(path.join(src, mod), {
+        repositories: src,
         path: true,
-        repository: src
     }, function(mod, err) {
         t.ifError(err);
         for (var i = 0; i < mod.partlist.length; i++) {
@@ -28,8 +27,8 @@ t.test("should include full path to components", function(t) {
 
 t.test("should not include full path to components", function(t) {
     new vPartList(path.join(src, mod), {
+        repositories: src,
         path: false,
-        repository: src
     }, function(mod, err) {
         t.ifError(err);
         for (var i = 0; i < mod.partlist.length; i++) {
