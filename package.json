@@ -1,6 +1,6 @@
 {
   "name": "vpartlist",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "build a parts list for a verilog module",
   "main": "index.js",
   "keywords": [
