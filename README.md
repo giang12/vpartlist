@@ -1,8 +1,10 @@
 
 # vpartlist 
+
+[![NPM](https://nodei.co/npm/vpartlist.svg?downloads=true&downloadRank=true)](https://nodei.co/npm/vpartlist/)&nbsp;&nbsp;
 [![Build Status](https://travis-ci.org/giang12/vpartlist.svg?branch=master)](https://travis-ci.org/giang12/vpartlist)
 
-build a parts list for verilog module
+Build a parts list for verilog module
 
 # example.js
 
